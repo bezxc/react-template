@@ -1,13 +1,13 @@
 import { create } from "zustand";
 
-type State = {
+interface State {
   count: number;
-};
+}
 
-type Actions = {
+interface Actions {
   increment: (qty: number) => void;
   decrement: (qty: number) => void;
-};
+}
 
 export const useCountStore = create<State & Actions>((set) => ({
   count: 0,
